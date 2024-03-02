@@ -22,7 +22,6 @@ function Form() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(inputField);
     resetAllInput();
   };
 
@@ -65,7 +64,6 @@ function Form() {
     }))
   };
 
-  console.log(inputField);
 
   return (
     <div>

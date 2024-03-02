@@ -9,8 +9,9 @@ const reducer = (state, action) => {
       return { ...state, data: action.payload}
     case CHANGE_PAGE :
       return {...state, currentPage: action.payload }
-    case CHNANGE_VIEW: 
-      return {...state, boxView: action.payload}
+    case CHNANGE_VIEW:
+      console.log(action.payload) 
+      return {...state, viewType: action.payload}
     case LOADING_STATUS:
       return {...state, isLoading: action.payload}
     default :
@@ -21,7 +22,7 @@ const reducer = (state, action) => {
 const initialState = {
     data: [],
     currentPage: 1,
-    boxView: "GRID",
+    viewType: "GRID",
     isLoading: true
 }
 function GlobalContext({children}) {

@@ -16,13 +16,12 @@ function Content() {
   let dataToShow = [];
   
   for(let i =1; i<=contentPerPage; i++){
-    console.log(currentPage)
     const currentIndex = currentPage === 1 ? i : (currentPage-1)*contentPerPage +i
-    console.log(data, dataToShow, currentIndex)
 
      data.length && dataToShow.push(data[currentIndex-1]);
   }
-  console.log(dataToShow, data)
+
+  console.log(viewType)
 
   return (<>
     <div className={viewType === 'GRID' ? 'box-cards' : 'capsule-cards'}>{
@@ -31,7 +30,6 @@ function Content() {
           if(!item){
             return
           }
-    
          return viewType === 'GRID' ? 
           <Card data={data} item={item} />
          : 

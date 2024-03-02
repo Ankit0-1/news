@@ -15,7 +15,6 @@ function Pagination() {
 
 
   const setCurrentPage = (page) => {
-    console.log(page)
     dispatch({
       type: CHANGE_PAGE,
       payload: page
